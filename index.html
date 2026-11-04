@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>15 Años: Mundo Zombi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="masthead">
+      <div><span class="kicker">SUPERVIVENCIA · HISTORIA INTERACTIVA</span><h1>15 Años: <em>Mundo Zombi</em></h1><p>Las decisiones pequeñas construyen el mundo que queda.</p></div>
+      <div class="days"><span>TIEMPO TRANSCURRIDO</span><strong id="era-label">DÍA 1</strong></div>
+    </header>
+
+    <section class="hero">
+      <img id="scene-image" src="assets/stage_0.jpg" alt="Superviviente en una ciudad en ruinas">
+      <div class="hero-gradient"></div>
+      <div class="hero-copy"><span id="scene-kicker">EL COLAPSO</span><h2 id="scene-title">La ciudad cae</h2><p id="scene-caption">Mi prioridad es salir con vida.</p><button id="listen" class="listen">▶ Escuchar relato</button></div>
+    </section>
+
+    <nav id="timeline" class="timeline" aria-label="Línea temporal"></nav>
+
+    <section class="play-grid">
+      <section class="story-card">
+        <span class="kicker">DECISIÓN DE SUPERVIVENCIA</span>
+        <h2 id="decision-title">El primer minuto</h2>
+        <p id="decision-copy">No hay mapa, no hay señal y la calle ya no es segura. Elegí qué priorizar.</p>
+        <div id="choices" class="choices"></div>
+        <div class="story-note" id="story-note">Cada elección cambia recursos, moral y comunidad.</div>
+      </section>
+      <aside class="status-card">
+        <div class="status-head"><span class="kicker">ESTADO DEL REFUGIO</span><span id="status-text">EN RIESGO</span></div>
+        <div class="stat"><label>AGUA</label><div><span id="water-bar"></span></div><b id="water-value">52</b></div>
+        <div class="stat"><label>COMIDA</label><div><span id="food-bar"></span></div><b id="food-value">48</b></div>
+        <div class="stat"><label>REFUGIO</label><div><span id="shelter-bar"></span></div><b id="shelter-value">25</b></div>
+        <div class="stat"><label>MORAL</label><div><span id="morale-bar"></span></div><b id="morale-value">42</b></div>
+        <div class="stat"><label>COMUNIDAD</label><div><span id="community-bar"></span></div><b id="community-value">8</b></div>
+        <div class="log"><span class="kicker">DIARIO DEL SUPERVIVIENTE</span><p id="log-text">Día 1. La ciudad se apagó en menos de una hora.</p></div>
+      </aside>
+    </section>
+
+    <section class="video-reference"><span class="kicker">REFERENCIA ORIGINAL</span><h2>La historia completa</h2><video controls preload="metadata" poster="assets/stage_0.jpg"><source src="assets/intro.mp4" type="video/mp4">Tu navegador no puede reproducir el video.</video></section>
+    <footer><span>Prototipo local · basado en la referencia proporcionada</span><button id="restart">Reiniciar historia</button></footer>
+  </main>
+  <div id="ending" class="ending hidden"><div class="ending-card"><span class="kicker">AÑO 15 · INFORME FINAL</span><h2 id="ending-title"></h2><p id="ending-copy"></p><div id="ending-stats"></div><button id="play-again" class="primary">Volver a empezar</button></div></div>
+  <script src="game.js"></script>
+</body>
+</html>
